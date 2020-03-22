@@ -1,35 +1,25 @@
-#content
-{ background-image: url("../images/bg4.svg");
-  float:left;}
 
-#sidebar_container
-{ float: right;
-  width: 224px;}
+#bar_container
+{ }
 
-.sidebar_top
+.sidebar_left
 { width: 222px;
   height: 14px;
   color: rgb(20, 2, 41);
-  background: transparent url(side_top.png) no-repeat;}
+  background: transparent url("../images/bg7.jpg") no-repeat;}
 
-.sidebar_base
+.sidebar_right
 { width: 222px;
   height: 14px;
   background: url(side_base.png) no-repeat;}
 
-.sidebar
+.verticalbar
 { float: right;
   width: 222px;
   padding: 0;
   margin: 0 0 16px 0;}
 
-.sidebar_item
+.bar_item
 { background: url(side_back.png) repeat-y;
   padding: 0 15px;
   width: 192px;}
-
-.sidebar li a.selected
-{ color: #444;} 
-
-.sidebar ul
-{ margin: 0;} 
