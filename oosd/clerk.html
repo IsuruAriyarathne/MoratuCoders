@@ -11,6 +11,16 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/clerk.css">
+    <script>
+        function toggle(x){
+            if (x==0){
+                document.getElementById("togglepart").style.display="block";
+            }else{
+                document.getElementById("togglepart").style.display="none";
+                return;
+            }
+        }
+    </script>
     
   </head>
   <body>
@@ -28,27 +38,38 @@
     </ul>
     <br><br>
     <div id="div1" style="max-width:325px">
-        <h1>Garbage In</h1>
+        <center><h1>Garbage In</h1></center>
       <form action="" target="_self" >
+          <center>
           <div class ="radio-group">
               <label class="radio">
-                <input type='radio' value ='commercial' name="garbage">
-                Commercial
+                <input type='radio' value ='billedg' name="garbage" onclick="toggle(0)" checked>
+                Billed
                 <span></span>
             </label>
             <label class="radio">
-                <input type='radio' value ='residential' name="garbage">
-                Residential
+                <input type='radio' value ='unbilledg' name="garbage" onclick="toggle(1)">
+                Unbilled
                 <span></span>
             </label>
           </div>
+        </center>
           <br>
             <label for="gtype" style="font-family:arial; color:white;">Garbage Type</label>
-            <input type="text" id="gtype" name="Garbage Type">
-            <label for="amnt" style="font-family:arial; color:white;">Amount</label>
-            <input type="number" id="amnt" name="Amount">
-            <label for="bill" style="font-family:arial; color:white;">Bill</label>
-            <input type="number" id="bill" name="Bill">
+            <div class="box">
+            <select>
+                <option value="gtype">Degradable</option>
+                <option value="gtype">Non-Degradable</option>
+
+            </select>
+            </div>
+
+            <label for="mass" style="font-family:arial; color:white;">Weight</label>
+            <input type="number" id="mass" name="Weight" placeholder="kg">
+            <div id="togglepart">
+            <label for="bill" style="font-family:arial; color:white;">Bill Amount</label>
+            <input type="number" id="bill" name="Bill" placeholder="Rs.">
+            </div>
             <input type="submit" value="submit">
             
       </form>
