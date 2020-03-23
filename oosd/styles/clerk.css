@@ -74,14 +74,18 @@ ul li:hover ul li{
         transform: translate(-50%,-50%) scale(1);
     }
 
+/*select type*/
+.box select{
+    background: darkgray;
+}
 
 
-
+/*other inputs*/
 input[type=text],input[type=number], select {
     font-family: arial;
-    color: white;
-    font-size: 15;
-    background-color: rgba(255,255,255,0.4);
+    color:black;
+    font-size: 17px;
+    background-color:rgba(255,255,255,0.4);
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -93,7 +97,7 @@ input[type=text],input[type=number], select {
   
   input[type=submit] {
     font-family: arial;
-    font-size: 20;
+    font-size: 20px;
     width: 100%;
     background-color: rgba(76, 175, 80,0.7);
     color: white;
