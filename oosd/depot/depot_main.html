@@ -41,6 +41,15 @@
                   </li>
             </ul>
         </div>
-
+    </nav>
+    <script src="depot_scripts/depot_main.js"></script>
+    <div id="div1">
+        <form class="form-inline" >
+            <label for="number">Division no :</label>
+            <input id="inp1" type="number" class="form-control" placeholder="Enter div no">
+            <label id="division">you entered: 0</label>
+            <button type="submit" class="btn btn-primary" onclick="chk(document.getElementById('inp1').value)">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
