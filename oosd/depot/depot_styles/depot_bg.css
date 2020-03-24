@@ -1,14 +1,23 @@
 body{
-    background-color:rgb(71, 115, 156);
+    font-family: Arial;
 }
 
 #div1 {
-    color:white;
-    position: absolute;
     width: 50%;
     padding: 20px;
+    position: relative;
+}
+#div3 {
+    width: 50%;
+    padding: 20px;
+    position: relative;
+    
 }
 
-label,input{
-    padding: 5px;
+#div2{
+
+    position: relative;
+}
+.lbl{
+    padding: 5px 5px;
 }

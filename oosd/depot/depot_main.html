@@ -44,12 +44,24 @@
     </nav>
     <script src="depot_scripts/depot_main.js"></script>
     <div id="div1">
-        <form class="form-inline" >
+        <form class="form-inline" onsubmit="chk(document.getElementById('inp1').value);return false">
             <label for="number">Division no :</label>
             <input id="inp1" type="number" class="form-control" placeholder="Enter div no">
-            <label id="division">you entered: 0</label>
-            <button type="submit" class="btn btn-primary" onclick="chk(document.getElementById('inp1').value)">Submit</button>
+            <label id="division">you entered:</label>
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
         </form>
+    </div>
+    
+    <div id="div2" class="container">
+        <div class="row">
+          <div id="div3" class="col-sm-6 " onsubmit="adder(document.getElementById('inp2').value)" style="display: none;">
+            <form class="form-inline" onsubmit="return false">
+                <input id="inp2" type="number" class="form-control" onfocus="this.value=''" placeholder="Enter ID">
+                <button type="submit" class="btn btn-outline-info">ADD</button>
+            </form>
+          </div>
+          <div id="div4" class="col-sm-6 "></div>
+        </div>
     </div>
 </body>
 </html>
