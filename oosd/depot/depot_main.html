@@ -43,7 +43,32 @@
         </div>
     </nav>
     <script src="depot_scripts/depot_main.js"></script>
-    <div id="div1">
+    <div id="divMain">
+        <form>
+            <div id="div1" class="input-group mb-3">
+                <input id="inp1" type="number" class="form-control" placeholder="Enter division number">
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="button" onclick="chk()">Enter</button>  
+                </div>
+            </div>
+            <div id="div4" style="display: none;">
+                <div id="div3" class="alert alert-success" style="display:none">
+                    <strong id="strg"></strong> 
+                </div>
+                <div id="div2" class="input-group mb-3">
+                    <input id="inp2" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" onclick="adder()">ADD</button> 
+                        <button class="btn btn-danger" type="button" onclick="remover()">DEL</button>  
+                    </div>
+                </div>
+                <div class="alert alert-info">
+                    <strong id=strg2></strong> 
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--<div id="div1">
         <form class="form-inline" onsubmit="chk(document.getElementById('inp1').value);return false">
             <label for="number">Division no :</label>
             <input id="inp1" type="number" class="form-control" placeholder="Enter div no">
@@ -62,6 +87,6 @@
           </div>
           <div id="div4" class="col-sm-6 "></div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

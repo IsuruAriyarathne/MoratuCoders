@@ -1,23 +1,31 @@
 body{
     font-family: Arial;
+    color: white;
+    background-color: #1F618D;
+}
+
+#divMain {
+    padding: 5vw;
+    position: relative; 
 }
 
 #div1 {
-    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: teal;
     padding: 20px;
     position: relative;
-}
-#div3 {
-    width: 50%;
-    padding: 20px;
-    position: relative;
-    
 }
 
 #div2{
-
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #2471A3;
+    padding: 10px;
     position: relative;
 }
-.lbl{
-    padding: 5px 5px;
+
+#div4{
+    max-width: 500px;
+    margin: 0 auto;
 }
