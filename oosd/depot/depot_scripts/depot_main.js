@@ -10,18 +10,27 @@ function remover(){
         console.log(ind);
         if(ind>-1){
             arr.splice(ind,1);
+            var c = document.getElementById("divi").children;
+            var parent = document.getElementById("divi");
+            parent.removeChild(c[ind]);
         }
     }
-    document.getElementById("strg2").innerHTML=arr;
+    console.log(arr);
 }
 
 function adder(){
+  
     let y = document.getElementById('inp2').value;
     let ind = arr.indexOf(y);
     if(ind == -1){
         arr.push(y);
+        var para = document.createElement("div");
+        var node = document.createTextNode(y);
+        para.appendChild(node);
+        var element = document.getElementById("divi");
+        element.appendChild(para);
     }
-    document.getElementById("strg2").innerHTML=arr;
+    console.log(arr);
 }
 function chk(){
     
@@ -36,4 +45,8 @@ function chk(){
         document.getElementById("div3").style.display="block";
         document.getElementById("div4").innerHTML ="<p>Sed ut perspiciatis...</p>"
     }*/
+}
+
+function test(){
+    console.log("try");
 }
