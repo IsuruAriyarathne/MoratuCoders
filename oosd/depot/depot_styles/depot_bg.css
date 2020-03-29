@@ -27,8 +27,23 @@ body{
 
 #div4{
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto;   
 }
+
+#div5{
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#div6{
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #2E86C1;
+    padding: 10px;
+    position: relative;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
