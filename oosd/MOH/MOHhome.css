@@ -1,0 +1,36 @@
+body{
+    font-family: Arial;
+    color: white;
+    background-color: #1F618D;
+}
+
+.sidenav {
+  height: 60%;
+  width: 160px;
+  position: fixed;
+  text-align: center;
+  z-index: 1;
+  top: 20%;
+  background-color: rgb(44, 82, 136);
+  padding-top: 80px;
+  font-size:larger;
+}
+
+.content{
+  margin-top: 15px;
+  height: 85%;
+  width: 85%;
+  left: 200px;
+  border-width: 15px;
+  position:fixed;
+  z-index:1;
+  border: rgb(136, 136, 156);
+  border-style: outset;
+}
+
+.a-things{
+  /*link:red;
+  visited: green;
+  hover: hotpink;
+  active: blue;*/
+}
