@@ -66,6 +66,7 @@ function adderV(){
     console.log(arrV);
 }
 function chk(){
+    document.getElementById("img1").style.display="none";
     document.getElementById("div7").style.display="block";
     x = document.getElementById('inp1').value;
     let indx = vehiLst.indexOf(x);
