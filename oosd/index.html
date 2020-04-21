@@ -1,37 +1,45 @@
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <link rel="icon" type="image/png" href="images/logo_header3.svg" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>WMS Login</title>
-    <link rel="stylesheet" href="styles/background.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <ul>
-      <li><a style="background-color:rgba(17, 17, 17, 0.78)">Home</a></li>
-      <li><a>About us</a></li>
-      <li><a>Help</a></li>
-    </ul>
-    <br><br>
-    <div id="div1" style="max-width:325px">
-      <form action="MOH.html" target="_self" >
-        <label for="uname" style="font-family:arial; color:white;">User name</label><br>
-        <input type="text" id="uname" name="User name"><br>
-        <label for="pw" style="font-family:arial; color:white;">Password</label><br>
-        <input type="password" id="pw" name="Password"><br>
-        <input type="submit" value="Login">
-      </form>
-      <p style="font-family:arial;color:white;font-size:13;text-align:right">forgot password?</p>
+<html>
+<head>
+	<title>Animated Login Form</title>
+	<link rel="stylesheet" type="text/css" href="styles/background.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="images/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="images/logImg.svg">
+		</div>
+		<div class="login-content">
+			<form action="index.html">
+				<img src="images/avatar.svg">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input">
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<input type="submit" class="btn" value="Login">
+            </form>
+        </div>
     </div>
-    <div class="footer">
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-google"></a>
-      <!--img src="images/logo.png" class="fa"-->
-    </div>
-  </body>
+    <script type="text/javascript" src="styles/background.js"></script>
+</body>
 </html>
