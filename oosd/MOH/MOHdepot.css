@@ -34,27 +34,3 @@ body{
   hover: hotpink;
   active: blue;*/
 }
-
-.button {
-  background-color: #1f1530;
-  border: none;
-  color: rgb(184, 208, 235);
-  padding: 16px 32px;
-  text-align: center;
-  font-size: 16px;
-  margin: 4px 2px;
-  opacity: 0.6;
-  transition: 0.3s;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  width: 300px;
-  border-radius: 15%;
-}
-
-.button-1{
-  display: flex;
-  justify-content: center;
-  height: 300px;
-  padding-top: 30px;
-}

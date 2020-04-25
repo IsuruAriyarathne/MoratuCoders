@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="icon" type="image/png" href="images/logo_header3.svg" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Clerk Inferface</title>
+    
+    <link rel="stylesheet" href="../styles/background.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="addEmployee.css">
+    <script>
+        function toggle(x){
+            if (x==0){
+                document.getElementById("togglepart").style.display="block";
+            }else{
+                document.getElementById("togglepart").style.display="none";
+                return;
+            }
+        }
+    </script>
+    
+  </head>
+  <body>
+    <ul>
+      <li><a style="background-color:rgba(17, 17, 17, 0.78)" href=MOHhome.html>BACK</a></li>
+    </ul>
+    <br><br>
+    <div id="div1" style="max-width:325px">
+        <center><h1>ADD EMPLOYEE</h1></center>
+      <form action="" target="_self" >
+          <center>
+          <p><b>304</b></p>
+          </center>
+          <br>
+            <div id="tooglepart">
+            <label for="mass" style="font-family:arial; color:white;">Name</label>
+            <input type="text" id="mass" name="Weight" placeholder="Isuru Ariyarathne">
+            </div>
+            <div id="togglepart">
+            <label for="mass" style="font-family:arial; color:white;">Salary Number</label>
+            <input type="number" id="mass" name="Weight" placeholder="180044">
+            </div>
+            <div id="togglepart">
+            <label for="bill" style="font-family:arial; color:white;">Birthday</label>
+            <input type="text" id="bill" name="Bill" placeholder="Year/Month/Date">
+            </div>
+            <div id="togglepart">
+            <label for="mass" style="font-family:arial; color:white;">Id number</label>
+            <input type="text" id="mass" name="Weight" placeholder="19972103446">
+            </div>
+            <input type="submit" value="submit">
+            <script src="removeEmployee.js"></script>
+            
+      </form>
+     
+    </div>
+    <div class="footer">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-google"></a>
+      <!--img src="images/logo.png" class="fa"-->
+    </div>
+  </body>
+</html>

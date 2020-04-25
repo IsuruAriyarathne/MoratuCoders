@@ -15,38 +15,36 @@
 
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">Main</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                      Settings
-                    </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Change password</a>
-                      <a class="dropdown-item" href="#">Log Out</a>
-                    </div>
-                  </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="sidenav">
-      <a class="a-things" href="MOHhome.html"><p style="color: black;">Add/Remove Employee</p></a><br>
-      <a class="a-things" href="MOHwaste.html"><p style="color: black;">Waste management System</p></a><br>
-      <a class="a-things" href="MOHdepot.html"><p style="color: black;">Depot records</p></a><br>
+      <a class="navbar-brand" href="#">(+-)Employee</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="MOHwaste.html">Garbage report</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="MOHdepot.html">Depot reports</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Settings
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Change password</a>
+                    <a class="dropdown-item" href="#">Log Out</a>
+                  </div>
+                </li>
+          </ul>
+      </div>
+    </nav>   
+    <div class=button-1>
+      <button class="button" onclick="window.location.href = 'addEmployee.html';">Add Employee</button>
+    </div>       
+    <div class=button-1>
+      <button class="button" onclick="window.location.href = 'removeEmployee.html';">Remove Employee</button>
     </div>
-
-    <div class="content">
-      
-    </div>
-
-        
-        
-        
-               
 </body>
 
 
