@@ -50,6 +50,8 @@ body{
   cursor: pointer;
   width: 300px;
   border-radius: 15%;
+  margin: 10px;
+  
 }
 
 .button-1{
