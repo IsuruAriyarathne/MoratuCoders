@@ -3,6 +3,7 @@ var url = require('url');
 var emp = require('../controllers/employee');
 var settings = require('../settings');
 var httpMsgs = require('./httpMsgs');
+var fileReader = require('../controllers/fileReader');
 
 
 http.createServer((req,res)=>{
@@ -11,7 +12,8 @@ http.createServer((req,res)=>{
     switch (req.method){
         case "GET":
             if(myurl.pathname == "/"){ // base http request
-                res.end();
+                fileReader.sendHomePage(req,res);
+
             }
             else if(myurl.pathname == "/employees" ){
                 if(myurl.searchParams.get('id')){
