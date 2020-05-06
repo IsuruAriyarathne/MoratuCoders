@@ -1,6 +1,6 @@
-var db = require('../core/db');
-var httpMsgs = require('../core/httpMsgs');
-var util = require('util');
+const db = require('../core/db');
+const httpMsgs = require('../core/httpMsgs');
+const util = require('util');
 
 exports.getList = (req,res)=>{
     db.excutesql("SELECT * FROM employee_table", (data , err)=>{
@@ -52,7 +52,6 @@ exports.update = (req,res,reqBody)=>{
         var data = JSON.parse(reqBody);
 
         if(!data.employee_id) throw new Error("id not provided");
-        console.log(JSON.stringify(data)+"HERE WEE");
         var sql = "UPDATE employee_table SET";
 //validate each item and add to query
         if(data.salary_id){
