@@ -7,7 +7,7 @@ exports.sendHomePage = (req,res)=>{
             httpMsgs.send404(req,res);
         }
         else{
-            res.write(data);
+            httpMsgs.sendHtml(req,res,data);
         }
         return res.end();
     });

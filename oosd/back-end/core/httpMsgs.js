@@ -33,3 +33,9 @@ exports.sendJson = (req , res , data)=>{
     res.write(JSON.stringify(data));
     res.end();
 };
+
+exports.sendHtml = (req , res , data)=>{
+    res.writeHead(200,{"Content-Type": "text/html"});
+    res.write(data);
+    res.end();
+};
