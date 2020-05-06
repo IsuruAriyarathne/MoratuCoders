@@ -7,4 +7,4 @@ exports.dbConfig ={
     database: 'oosd'
 };
 
-exports.webPort = 5500;
+exports.webPort = 8000;
