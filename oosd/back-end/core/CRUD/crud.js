@@ -2,6 +2,7 @@ const url = require('url');
 const settings = require('../../settings');
 const emp_crud = require('./employee_crud');
 const attend_crud = require('./attendence_crud');
+const vehi_detail_crud = require('./vehicle_detail_crud');
 const httpMsgs = require('../httpMsgs');
 
 exports.get = (req,res)=>{
@@ -10,6 +11,9 @@ exports.get = (req,res)=>{
         emp_crud.get(req,res,myurl);
     }else if(myurl.pathname == "/attendance"){
         attend_crud.get(req,res,myurl);
+    }
+    else if(myurl.pathname == '/vehicles'){
+        vehi_detail_crud.get(req,res,myurl);
     }
     else{
         httpMsgs.send404(req,res);

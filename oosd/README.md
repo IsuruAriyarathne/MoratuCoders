@@ -58,3 +58,6 @@ Can use these endpoints to interact with daily_attendance
                     "employee_id    : //id              --int
                 }
 ------------------------------------------------------------------------------------------------
+Can use these endpoint to interact with vehicle_detail table
+    1. GET - get list of vehicles       - localhost:8000/vehicles
+------------------------------------------------------------------------------------------------
