@@ -31,12 +31,20 @@ Can use these endpoints to interact with daily_attendance
     1. PUT  - get attendance list       - localhost:8000/attendance
     2. PUT  - get attendance by date    - localhost:8000/employees?date=2020-01-01
     3. POST - Add employee attendance   - localhost:8000/employees
-        body -  {
-                    "date"          : "2020-05-30",     --str
-                    "division"      : 1,                --int 
-                    "employee_id"   : 31,               --int
-                    "method"        : 1                 --int
-                }
+        body -  [
+                    {
+                        "date"          : "2020-05-30",     --str
+                        "division"      : 1,                --int 
+                        "employee_id"   : 31,               --int
+                        "method"        : 1                 --int
+                    },
+                    {
+                        "date"          : "2020-05-30",     --str
+                        "division"      : 1,                --int 
+                        "employee_id"   : 31,               --int
+                        "method"        : 1                 --int
+                    } .....
+                ]
     4. PUT - update an employee details - localhost:8000/employees
         body -  {
                     "date"          : "2020-05-30",     --str
