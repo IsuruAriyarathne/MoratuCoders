@@ -2,13 +2,14 @@ var x=0;
 var arr = []; //array for waste colloctors
 var arrV = []; //array for vehicle supporters
 var vehicles;
-var divLst = ["Wehera","Nuwara para","Damulu para","Migamu para"];
+var divLst ;
 var vehiLst = ['2','3']; // these are the divisions that have vehicles
 /*  can use this to get selected vehicle
     var e = document.getElementById("exampleFormControlSelect1");
     var strUser = e.options[e.selectedIndex].value;
 */
 getVehiList();
+getDivList();
 
 function getVehiList(){
     var xhttp = new XMLHttpRequest();
@@ -17,9 +18,20 @@ function getVehiList(){
         vehicles = JSON.parse(this.responseText);
         renderHtml(vehicles);
     }
-  };
-  xhttp.open("GET", "http://localhost:8000/vehicles", true);
-  xhttp.send();
+    };
+    xhttp.open("GET", "http://localhost:8000/vehicles", true);
+    xhttp.send();
+}
+
+function getDivList(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        divLst = JSON.parse(this.responseText);
+    }
+    };
+    xhttp.open("GET", "http://localhost:8000/divisions", true);
+    xhttp.send();
 }
 
 function renderHtml(data){
@@ -98,7 +110,7 @@ function chk(){
     let indx = vehiLst.indexOf(x);
     console.log(indx);
     document.getElementById("div4").style.display="block";
-    document.getElementById("strg").innerHTML=divLst[x-1]+" division";
+    document.getElementById("strg").innerHTML=divLst[x-1].division_name+" division";
     document.getElementById("div3").style.display="block";
     if(indx!=-1){
         document.getElementById("div5").style.display="block";

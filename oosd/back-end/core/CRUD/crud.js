@@ -3,6 +3,7 @@ const settings = require('../../settings');
 const emp_crud = require('./employee_crud');
 const attend_crud = require('./attendence_crud');
 const vehi_detail_crud = require('./vehicle_detail_crud');
+const division_table_crud = require('./division_table_crud');
 const httpMsgs = require('../httpMsgs');
 
 exports.get = (req,res)=>{
@@ -14,6 +15,9 @@ exports.get = (req,res)=>{
     }
     else if(myurl.pathname == '/vehicles'){
         vehi_detail_crud.get(req,res,myurl);
+    }
+    else if(myurl.pathname == '/divisions'){
+        division_table_crud.get(req,res,myurl);
     }
     else{
         httpMsgs.send404(req,res);
