@@ -1,8 +1,34 @@
 var x=0;
 var arr = []; //array for waste colloctors
 var arrV = []; //array for vehicle supporters
+var vehicles;
 var divLst = ["Wehera","Nuwara para","Damulu para","Migamu para"];
-var vehiLst = ['2','3'];
+var vehiLst = ['2','3']; // these are the divisions that have vehicles
+/*  can use this to get selected vehicle
+    var e = document.getElementById("exampleFormControlSelect1");
+    var strUser = e.options[e.selectedIndex].value;
+*/
+getVehiList();
+
+function getVehiList(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        vehicles = JSON.parse(this.responseText);
+        renderHtml(vehicles);
+    }
+  };
+  xhttp.open("GET", "http://localhost:8000/vehicles", true);
+  xhttp.send();
+}
+
+function renderHtml(data){
+    var htmlString = "";
+    for(i=0;i<data.length;i++){
+        htmlString += "<option>" + data[i].vehicle_num + "</option>"  ;
+    }
+    document.getElementById("exampleFormControlSelect1").innerHTML = htmlString;
+}
 
 function remover(){
     let y = document.getElementById('inp2').value;
@@ -52,7 +78,7 @@ function adder(){
 }
 
 function adderV(){
-  
+
     let y = document.getElementById('inp4').value;
     let ind = arrV.indexOf(y);
     if(ind == -1){
