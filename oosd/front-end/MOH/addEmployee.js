@@ -9,17 +9,18 @@ function submitAttendance() {
   var emp_type = parseInt(document.getElementById('emtype').value);
 
   var empObj = {
-                  employee_id: emp_id,
-                  salary_id: sal_id, 
-                  name: emp_Name, 
-                  dob : emp_dob,
-                  employee_type : emp_type,
-                  gender  : emp_gen
-                };
-  
-  console.log(empObj);
+    employee_id: emp_id,
+    salary_id: sal_id,
+    name: emp_Name,
+    dob: emp_dob,
+    employee_type: emp_type,
+    gender: emp_gen,
+  };
 
+  console.log(empObj);
+  alert(JSON.stringify(empObj));
   var xhttp = new XMLHttpRequest();
+<<<<<<< HEAD
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
 <<<<<<< HEAD
@@ -28,7 +29,13 @@ function submitAttendance() {
           alert("New Employee added successfully..");
 >>>>>>> parent of a237444... submit button
       }
+=======
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      alert("New Employee added successfully..");
+    }
+>>>>>>> ddac3ae7db6c9734fb032454e063cf3a639dc7d4
   };
   xhttp.open("POST", "http://localhost:8000/employees", true);
-  xhttp.send(JSON.stringify(empObj))
+  xhttp.send(JSON.stringify(empObj));
 }
