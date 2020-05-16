@@ -1,33 +1,29 @@
-var myObj = {
-  employee_id: 200,
-  salary_id: 567777,
-  name: "isuru",
-  dob: 5,
-  employee_type: 78988888,
-  gender: document.getElementById("selection").options[
-    document.getElementById("selection").selectedIndex
-  ].value,
-};
+function submitEmployee() {
+    
+  var emp_Name= document.getElementById('name').value;
+  var emp_id = parseInt(document.getElementById('id').value);
+  var sal_id = parseInt(document.getElementById('salid').value);
+  var emp_dob = document.getElementById('dob').value;
+  var emp_gen = document.getElementById('selection').value;
+  var emp_type = parseInt(document.getElementById('emtype').value);
 
-function loadDoc() {
-  alert(document.getElementById("mass2").value);
-  alert(document.getElementById("mass3").value);
-  alert(document.getElementById("mass1").value);
-  alert(document.getElementById("bill4").value);
-  alert(document.getElementById("bill5").value);
-  alert(
-    document.getElementById("selection").options[
-      document.getElementById("selection").selectedIndex
-    ].value
-  );
-  alert(JSON.stringify(myObj));
+  var empObj = {
+                  employee_id: emp_id,
+                  salary_id: sal_id, 
+                  name: emp_Name, 
+                  dob : emp_dob,
+                  employee_type : emp_type,
+                  gender  : emp_gen
+                };
+  
+  console.log(empObj);
+
   var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      alert("successfully added");
-      document.getElementById("demo").innerHTML = this.responseText;
-    }
+  xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          alert("New Employee added successfully..");
+      }
   };
-  xhttp.open("POST", "localhost:8000/employees", true);
-  xhttp.send(JSON.stringify(myObj));
+  xhttp.open("POST", "http://localhost:8000/employees", true);
+  xhttp.send(JSON.stringify(empObj))
 }
