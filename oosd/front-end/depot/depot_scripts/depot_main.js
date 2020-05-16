@@ -8,6 +8,8 @@ var vehiLst = ['2','3']; // these are the divisions that have vehicles
     var e = document.getElementById("exampleFormControlSelect1");
     var strUser = e.options[e.selectedIndex].value;
 */
+var attendList = []; //attended employee object array
+
 getVehiList();
 getDivList();
 
@@ -119,4 +121,39 @@ function chk(){
 
 function test(){
     console.log("try");
+}
+
+function submitAttendance() {
+    
+    var d = new Date();
+    var todate = d.getFullYear() +"-" +d.getMonth()+"-"+d.getDate();
+    var emp_division = parseInt(document.getElementById('inp1').value);
+
+    //Loop through arr list
+    for( i = 0; i<arr.length; i++ ){
+        var empObj = {date: todate,
+                     division: emp_division, 
+                     employee_id: parseInt(arr[i]), 
+                     method : 0};
+        attendList.push(empObj);
+    }
+    //Loop through arrV List
+    for( i = 0; i<arrV.length; i++ ){
+        var empVObj = {date: todate,
+                     division: emp_division, 
+                     employee_id: parseInt(arrV[i]), 
+                     method : 1};
+        attendList.push(empVObj);
+    }
+
+    console.log(attendList);
+   
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("Data submitted successfully..");
+        }
+    };
+    xhttp.open("POST", "http://localhost:8000/employees", true);
+    xhttp.send(JSON.stringify(attendList));
 }
