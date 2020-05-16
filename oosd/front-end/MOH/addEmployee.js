@@ -1,3 +1,4 @@
+
 function submitAttendance() {
     
   var emp_Name= document.getElementById('name').value;
@@ -21,7 +22,11 @@ function submitAttendance() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
+<<<<<<< HEAD
           alert("Data submitted successfully..");
+=======
+          alert("New Employee added successfully..");
+>>>>>>> parent of a237444... submit button
       }
   };
   xhttp.open("POST", "http://localhost:8000/employees", true);
