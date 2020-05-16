@@ -1,6 +1,6 @@
--- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.19, for macos10.15 (x86_64)
 --
--- Host: 127.0.0.1    Database: wms_db
+-- Host: 127.0.0.1    Database: oosd
 -- ------------------------------------------------------
 -- Server version	8.0.19
 
@@ -23,11 +23,10 @@ DROP TABLE IF EXISTS `daily_attendance`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `daily_attendance` (
-  `date` date NOT NULL,
+  `tdate` date NOT NULL,
   `division` int NOT NULL,
   `employee_id` int NOT NULL,
-  `vehicle/walk` int DEFAULT NULL,
-  PRIMARY KEY (`date`)
+  `vehiclewalk` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -37,6 +36,7 @@ CREATE TABLE `daily_attendance` (
 
 LOCK TABLES `daily_attendance` WRITE;
 /*!40000 ALTER TABLE `daily_attendance` DISABLE KEYS */;
+INSERT INTO `daily_attendance` VALUES ('2020-01-01',5,550,1),('2020-04-07',5,178,0),('2020-04-30',1,11,1),('2020-05-30',2,11,0),('2020-05-30',2,31,1),('2020-05-30',2,31,1),('2020-03-30',1,213,0),('2020-06-30',4,330,1);
 /*!40000 ALTER TABLE `daily_attendance` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,4 +179,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-26 23:36:53
+-- Dump completed on 2020-05-16 15:22:46
