@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="icon" type="image/png" href="images/logo_header3.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <title>Clerk Inferface</title>
@@ -13,49 +12,45 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="employeedetail.css" />
-    <script>
-      function toggle(x) {
-        if (x == 0) {
-          document.getElementById("togglepart").style.display = "block";
-        } else {
-          document.getElementById("togglepart").style.display = "none";
-          return;
-        }
-      }
-    </script>
   </head>
   <body>
     <ul>
       <li>
-        <a style="background-color: rgba(17, 17, 17, 0.78);" href="MOHhome.html"
-          >BACK</a
-        >
+        <a style="background-color: rgba(17, 17, 17, 0.78);" href="MOHhome.html">BACK</a>
       </li>
     </ul>
     <br /><br />
     <div id="div1" style="max-width: 325px;">
       <center><h1>EMPLOYEE DETAILS</h1></center>
       <form action="" target="_self">
-        <br />
+          <br />
+
         <div id="togglepart">
-          <label for="mass" style="font-family: arial; color: white;"
-            >Index number</label
-          >
-          <input type="text" id="idnum" name="Weight" placeholder="180044" />
+          <label for="mass" style="font-family: arial; color: white;">Enter Employee ID</label>
+          <input id="idnum" type="number"  name="emp_id" placeholder="180044" />
         </div>
-        <input type="submit" value="submit" onclick="loadDoc()" />
+
+        <div id="sub">
+            <button id = "btn" type="button" onclick ="viewEmployee()">VIEW</button>
+        </div>
         <script src="employeedetail.js"></script>
+        <div id="detail">
+            <p id="empName"></p>
+            <p id="empID">
+            <p id="empSalID"></p>
+            <p id="empGender"></p>
+            <p id="empType"></p>
+        </div>
+
       </form>
     </div>
-    <div><p id="empName"></p></div>
-    <div><p id="empSalaryID"></p></div>
-    <div><p id="empGender"></p></div>
-    <div><p id="empType"></p></div>
+
+   
+
     <div class="footer">
       <a href="#" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
       <a href="#" class="fa fa-google"></a>
-      <!--img src="images/logo.png" class="fa"-->
     </div>
   </body>
 </html>
