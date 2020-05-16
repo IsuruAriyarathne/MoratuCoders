@@ -154,6 +154,6 @@ function submitAttendance() {
             alert("Data submitted successfully..");
         }
     };
-    xhttp.open("POST", "http://localhost:8000/employees", true);
+    xhttp.open("POST", "http://localhost:8000/attendance", true);
     xhttp.send(JSON.stringify(attendList));
 }

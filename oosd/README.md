@@ -29,8 +29,8 @@ Can use these endpoints to interact with employee_table
 ------------------------------------------------------------------------------------------------
 Can use these endpoints to interact with daily_attendance
     1. PUT  - get attendance list       - localhost:8000/attendance
-    2. PUT  - get attendance by date    - localhost:8000/employees?date=2020-01-01
-    3. POST - Add employee attendance   - localhost:8000/employees
+    2. PUT  - get attendance by date    - localhost:8000/attendance?date=2020-01-01
+    3. POST - Add employee attendance   - localhost:8000/attendance
         body -  [
                     {
                         "date"          : "2020-05-30",     --str
@@ -45,14 +45,14 @@ Can use these endpoints to interact with daily_attendance
                         "method"        : 1                 --int
                     } .....
                 ]
-    4. PUT - update an employee details - localhost:8000/employees
+    4. PUT - update an employee details - localhost:8000/attendance
         body -  {
                     "date"          : "2020-05-30",     --str
                     "division"      : 1,                --int 
                     "employee_id"   :31,                --int
                     "method"        :1                  --int
                 }
-    5. DELETE- delete an employee       - localhost:8000/employees
+    5. DELETE- delete an employee       - localhost:8000/attendance
          body - {
                     "date"          : //YYYY-MM-DD,     --str
                     "employee_id    : //id              --int
