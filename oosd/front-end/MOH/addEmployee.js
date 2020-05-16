@@ -1,4 +1,6 @@
+
 function submitAttendance() {
+
     
   var emp_Name= document.getElementById('name').value;
   var emp_id = parseInt(document.getElementById('id').value);
@@ -21,7 +23,9 @@ function submitAttendance() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
+
           alert("Data submitted successfully..");
+
       }
   };
   xhttp.open("POST", "http://localhost:8000/employees", true);
