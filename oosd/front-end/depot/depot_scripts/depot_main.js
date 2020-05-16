@@ -126,7 +126,7 @@ function test(){
 function submitAttendance() {
     
     var d = new Date();
-    var todate = d.getFullYear() +"-" +d.getMonth()+"-"+d.getDate();
+    var todate = d.getFullYear() +"-" +(d.getMonth()+1)+"-"+d.getDate();
     var emp_division = parseInt(document.getElementById('inp1').value);
 
     //Loop through arr list
