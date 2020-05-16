@@ -4,7 +4,7 @@ const fileReader = require('../controllers/fileReader');
 const crud = require('./CRUD/crud');
 
 http.createServer((req,res)=>{
-
+    res.setHeader('Access-Control-Allow-Origin','*');
    // console.log(myurl.searchParams.get('id'));
     switch (req.method){
         case "GET":
