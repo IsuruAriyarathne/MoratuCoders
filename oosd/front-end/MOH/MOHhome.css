@@ -28,12 +28,7 @@ body{
   border-style: outset;
 }
 
-.a-things{
-  /*link:red;
-  visited: green;
-  hover: hotpink;
-  active: blue;*/
-}
+
 
 .button {
   background-color: #1f1530;
@@ -57,6 +52,7 @@ body{
 .button-1{
   display: flex;
   justify-content: center;
-  height: 300px;
+  height: 200px;
   padding-top: 30px;
 }
+
