@@ -14,8 +14,8 @@ function viewDailyAttendane() {
   }
   
 function renderHtml(data) {
-    htmlString = "<table><tr><th>Employee ID</th><th>Division></th><th>Vehicle/walk</th></tr>";
-    date.forEach(element => {
+    htmlString = "<table class='table table-bordered'><tr><th>Employee ID</th><th>Division</th><th>Vehicle/walk</th></tr>";
+    data.forEach(element => {
         htmlString += "<tr>"+"<td>"+element.employee_id+"</td>"+"<td>"+element.division+"</td>"+"<td>"+element.vehiclewalk+"</td>"+"</tr>";
     });
     document.getElementById("display").innerHTML = htmlString;
