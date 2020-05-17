@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="depot_styles/depot_bg.css">
+    <link rel="stylesheet" href="depot_styles/depot_edit.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -12,7 +13,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">Edit</a>
+        <a class="navbar-brand" href="#">View Attendance</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,6 +43,31 @@
             </ul>
         </div>
     </nav>
-
+    
+      <div id="div1" style="max-width: 325px;">
+        <center><h1>VIEW ATTENDANCE</h1></center>
+        <form action="" target="_self">
+            <br />
+  
+          <div id="togglepart">
+            <label for="mass" style="font-family: arial; color: white;">Enter Date</label>
+            <input id="idnum" type="number"  name="emp_id" placeholder="2020-02-02" />
+          </div>
+  
+          <div id="sub">
+              <button id = "btn" type="button" onclick ="viewEmployee()">VIEW</button>
+          </div>
+          <script src="employeedetail.js"></script>
+          <div id="detail">
+              <p id="attend_emp"></p>
+              
+          </div>
+  
+        </form>
+      </div>
+  
+     
+  
+      
 </body>
 </html>
