@@ -2,7 +2,6 @@ var x=0;
 var arr = []; //array for waste colloctors
 var arrV = []; //array for vehicle supporters
 var vehicles;
-var divLst ;
 var vehiLst = ['2','3']; // these are the divisions that have vehicles
 /*  can use this to get selected vehicle
     var e = document.getElementById("exampleFormControlSelect1");
@@ -11,7 +10,6 @@ var vehiLst = ['2','3']; // these are the divisions that have vehicles
 var attendList = []; //attended employee object array
 
 getVehiList();
-getDivList();
 
 function getVehiList(){
     var xhttp = new XMLHttpRequest();
@@ -25,15 +23,18 @@ function getVehiList(){
     xhttp.send();
 }
 
-function getDivList(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        divLst = JSON.parse(this.responseText);
-    }
-    };
-    xhttp.open("GET", "http://localhost:8000/divisions", true);
-    xhttp.send();
+function getDivison(x){
+    return new Promise((res,rej)=>{
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                division = JSON.parse(this.responseText);
+                res(division);
+        }
+        };
+        xhttp.open("GET", "http://localhost:8000/divisions?id="+x, true);
+        xhttp.send();
+    });
 }
 
 function renderHtml(data){
@@ -105,17 +106,23 @@ function adderV(){
     }
     console.log(arrV);
 }
-function chk(){
-    document.getElementById("img1").style.display="none";
-    document.getElementById("div7").style.display="block";
+async function chk(){
     x = document.getElementById('inp1').value;
-    let indx = vehiLst.indexOf(x);
-    console.log(indx);
-    document.getElementById("div4").style.display="block";
-    document.getElementById("strg").innerHTML=divLst[x-1].division_name+" division";
-    document.getElementById("div3").style.display="block";
-    if(indx!=-1){
-        document.getElementById("div5").style.display="block";
+    if(x>0 && x<22){
+        document.getElementById("img1").style.display="none";
+        document.getElementById("div7").style.display="block";
+        let indx = vehiLst.indexOf(x);
+        var div = await getDivison(x); //rest of the code will execute after gain this val
+        console.log(indx);
+        document.getElementById("div4").style.display="block";
+        document.getElementById("strg").innerHTML= div[0].division_name + " division";
+        document.getElementById("div3").style.display="block";
+        if(indx!=-1){
+            document.getElementById("div5").style.display="block";
+        }
+    }
+    else{
+        alert(x+" is not a valid division")
     }
 }
 

@@ -2,8 +2,8 @@ Goto settings and change database configerations before run the server.
 If you are using nodemon to start the server use "nomdemon run start" command.
 ------------------------------------------------------------------------------------------------
 Can use these endpoints to interact with employee_table
-    1. PUT  - get list of employees     - localhost:8000/employees
-    2. PUT  - get details of an emp     - localhost:8000/employees?id=123
+    1. GET  - get list of employees     - localhost:8000/employees
+    2. GET  - get details of an emp     - localhost:8000/employees?id=123
     3. POST - Add employee              - localhost:8000/employees
         body -  {
                     "employee_id"   : //id,             --int
@@ -28,8 +28,8 @@ Can use these endpoints to interact with employee_table
                 }
 ------------------------------------------------------------------------------------------------
 Can use these endpoints to interact with daily_attendance
-    1. PUT  - get attendance list       - localhost:8000/attendance
-    2. PUT  - get attendance by date    - localhost:8000/attendance?date=2020-01-01
+    1. GET  - get attendance list       - localhost:8000/attendance
+    2. GET  - get attendance by date    - localhost:8000/attendance?date=2020-01-01
     3. POST - Add employee attendance   - localhost:8000/attendance
         body -  [
                     {
@@ -60,4 +60,8 @@ Can use these endpoints to interact with daily_attendance
 ------------------------------------------------------------------------------------------------
 Can use these endpoint to interact with vehicle_detail table
     1. GET - get list of vehicles       - localhost:8000/vehicles
+------------------------------------------------------------------------------------------------
+Can use these endpoint to interact with division table
+    1. GET - get list of divisions         - localhost:8000/divisions
+    2. GET - get details of a division     - localhost:8000/divisions?id=123
 ------------------------------------------------------------------------------------------------
