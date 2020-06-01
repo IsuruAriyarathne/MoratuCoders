@@ -5,7 +5,7 @@ Can use these endpoints to interact with employee_table
     1. GET  - get list of employees     - localhost:8000/employees
     2. GET  - get details of an emp     - localhost:8000/employees?id=123&type=json
     3. GET  - check emp_id is available - localhost:8000/employees?id=123&type=status
-    3. POST - Add employee              - localhost:8000/employees
+    4. POST - Add employee              - localhost:8000/employees
         body -  {
                     "employee_id"   : //id,             --int
                     "salary_id"     : //sal_id,         --int
@@ -14,7 +14,7 @@ Can use these endpoints to interact with employee_table
                     "employee_type" : //1/2/3/4,      --int
                     "gender"        : //M/F           --str
                 }
-    4. PUT - update an employee details - localhost:8000/employees
+    5. PUT - update an employee details - localhost:8000/employees
         body -  {
                     "employee_id"   : //id,             --int
                     "salary_id"     : //sal_id,         --int
@@ -23,7 +23,7 @@ Can use these endpoints to interact with employee_table
                     "employee_type" : //1/2/3/4,        --int
                     "gender"        : //M/F             --str
                 }
-    5. DELETE- delete an employee       - localhost:8000/employees
+    6. DELETE- delete an employee       - localhost:8000/employees
          body - {
                     "employee_id"   : //id,             --int
                 }
@@ -31,7 +31,8 @@ Can use these endpoints to interact with employee_table
 Can use these endpoints to interact with daily_attendance
     1. GET  - get attendance list       - localhost:8000/attendance
     2. GET  - get attendance by date    - localhost:8000/attendance?date=2020-01-01
-    3. POST - Add employee attendance   - localhost:8000/attendance
+    3. GET  - get attendance of a div by date - localhost:8000/attendance?date=2020-01-01&div=2
+    4. POST - Add employee attendance   - localhost:8000/attendance
         body -  [
                     {
                         "date"          : "2020-05-30",     --str
@@ -46,14 +47,14 @@ Can use these endpoints to interact with daily_attendance
                         "method"        : 1                 --int
                     } .....
                 ]
-    4. PUT - update an employee details - localhost:8000/attendance
+    5. PUT - update an employee details - localhost:8000/attendance
         body -  {
                     "date"          : "2020-05-30",     --str
                     "division"      : 1,                --int 
                     "employee_id"   :31,                --int
                     "method"        :1                  --int
                 }
-    5. DELETE- delete an employee       - localhost:8000/attendance
+    6. DELETE- delete an employee       - localhost:8000/attendance
          body - {
                     "date"          : //YYYY-MM-DD,     --str
                     "employee_id    : //id              --int

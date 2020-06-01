@@ -13,6 +13,18 @@ exports.getList = (req,res)=>{
     });
 };
 
+exports.getByDiv = (req,res,tdate,div)=>{
+    db.excutesql("SELECT * FROM daily_attendance WHERE tdate='"+tdate+"' AND division="+div, (data , err)=>{
+        if(err){
+            httpMsgs.send500(req,res,err);
+        }
+        else{
+            //console.log(data.id);//should add error to unvaild id
+            httpMsgs.sendJson(req , res, data);
+        }
+    });
+};
+
 exports.get = (req,res,tdate)=>{
     db.excutesql("SELECT * FROM daily_attendance WHERE tdate='"+tdate+"'", (data , err)=>{
         if(err){
