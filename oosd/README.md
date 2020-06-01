@@ -3,7 +3,8 @@ If you are using nodemon to start the server use "nomdemon run start" command.
 ------------------------------------------------------------------------------------------------
 Can use these endpoints to interact with employee_table
     1. GET  - get list of employees     - localhost:8000/employees
-    2. GET  - get details of an emp     - localhost:8000/employees?id=123
+    2. GET  - get details of an emp     - localhost:8000/employees?id=123&type=json
+    3. GET  - check emp_id is available - localhost:8000/employees?id=123&type=status
     3. POST - Add employee              - localhost:8000/employees
         body -  {
                     "employee_id"   : //id,             --int

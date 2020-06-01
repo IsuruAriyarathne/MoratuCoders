@@ -5,6 +5,11 @@ exports.send500 = (req , res , err ) =>{
     res.end();
 };
 
+exports.send400 = (req , res) =>{
+    res.writeHead(400,"Bad_request",{"Content-Type":"application/json"});
+    res.end();
+};
+
 exports.send405 = (req , res) =>{ 
     res.writeHead(405,"Method not allowed",{"Content-Type":"application/json"});
     res.write(JSON.stringify({data: "Error occured "}));   

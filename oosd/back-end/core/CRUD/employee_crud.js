@@ -3,7 +3,16 @@ const httpMsgs = require('../httpMsgs');
 
 exports.get = (req,res,myurl)=>{
     if(myurl.searchParams.get('id')){
-        emp.get(req,res,myurl.searchParams.get('id'));
+        var type = myurl.searchParams.get('type');
+        if( type == 'json'){
+            emp.get(req,res,myurl.searchParams.get('id'));
+        }
+        else if(type == 'status'){
+            emp.getStatus(req,res,myurl.searchParams.get('id'));
+        } 
+        else{
+            httpMsgs.send405(req,res);
+        }
     }
     else{
         emp.getList(req,res);

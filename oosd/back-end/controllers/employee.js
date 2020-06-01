@@ -25,6 +25,23 @@ exports.get = (req,res,empno)=>{
     });
 };
 
+exports.getStatus = (req,res,empno)=>{
+    db.excutesql("SELECT employee_id FROM employee_table WHERE employee_id="+ empno, (data , err)=>{
+        if(err){
+            httpMsgs.send500(req,res,err);
+        }
+        else{
+            if(data[0]){
+                httpMsgs.send200(req,res);
+            }
+            else{
+                httpMsgs.send400(req,res);
+            }
+            
+        }
+    });
+};
+
 exports.add = (req,res,reqBody)=>{
     try{
         if(!reqBody) throw new Error("Input not valid");
