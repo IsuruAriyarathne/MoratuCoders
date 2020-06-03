@@ -42,9 +42,356 @@
             </ul>
         </div>
     </nav>
-    
-    <div>
-        
-    </div>    
+
+    <script src="./depot_scripts/depot_edit.js"></script>
+
+    <div class="container">
+       <div class="row">
+        <div class="col" style="background-color:#17A589; color: white; text-align: center;">Walk</div>
+        <div class="col" style="background-color:#D4AC0D; color: white; text-align: center;">Vehicle</div>
+       </div>
+    </div>
+
+    <div class="row" id="cards">
+        <div class="col-sm-6" id="card1">
+          <div class="card">
+            <div class="card-body">
+                <h5 class="card-title" id="header1">Div-1</h5>
+                <div id="div1" class="flex-container"></div>
+                <div class="input-group mb-3">
+                    <input id="inp1" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" onclick="adder(1)">ADD</button> 
+                        <button class="btn btn-danger" type="button" onclick="remover(1)">DEL</button>  
+                    </div>
+                </div>
+                <!-- Default switch -->
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitches">
+                    <label class="custom-control-label" for="customSwitches">with vehicle</label>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6" id="card2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header2">Div-2</h5>
+                <div id="div2" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp2" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(2)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(2)">DEL</button>  
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div> 
+
+        <div class="col-sm-6" id="card3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header3">Div-3</h5>
+                <div id="div3" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp3" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(3)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(3)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6" id="card4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header4">Div-4</h5>
+                <div id="div4" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp4" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(4)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(4)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6" id="card5">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header5">Div-5</h5>
+                <div id="div5" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp5" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(5)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(5)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6" id="card6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header6">Div-6</h5>
+                <div id="div6" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp6" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(6)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(6)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card7">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header7">Div-7</h5>
+                <div id="div7" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp7" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(7)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(7)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card8">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header8">Div-8</h5>
+                <div id="div8" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp8" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(8)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(8)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card9">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header9">Div-9</h5>
+                <div id="div9" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp9" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(9)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(9)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card10">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header10">Div-10</h5>
+                <div id="div10" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp10" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(10)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(10)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card11">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header11">Div-11</h5>
+                <div id="div11" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp11" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(11)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(11)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header12">Div-12</h5>
+                <div id="div12" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp12" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(12)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(12)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card13">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header13">Div-13</h5>
+                <div id="div13" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp13" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(13)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(13)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card14">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header14">Div-14</h5>
+                <div id="div14" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp14" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(14)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(14)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card15">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header15">15</h5>
+                <div id="div15" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp15" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(15)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(15)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card16">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header16">Div-16</h5>
+                <div id="div16" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp16" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(16)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(16)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card17">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header17">Div-17</h5>
+                <div id="div17" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp17" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(17)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(17)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card18">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header18">Div-18</h5>
+                <div id="div18" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp18" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(18)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(18)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card19">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header19">Div-19</h5>
+                <div id="div19" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp19" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(19)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(19)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card20">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header20">Div-20</h5>
+                <div id="div20" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp20" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(20)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(20)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6" id="card21">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" id="header21">Div-21</h5>
+                <div id="div21" class="flex-container"></div>
+                <div class="input-group mb-3">
+                  <input id="inp21" type="number" class="form-control" placeholder="Enter ID number" onfocus="this.value=''">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="adder(21)">ADD</button> 
+                      <button class="btn btn-danger" type="button" onclick="remover(21)">DEL</button>  
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
 </body>
 </html>

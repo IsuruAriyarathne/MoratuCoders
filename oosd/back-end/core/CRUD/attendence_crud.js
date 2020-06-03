@@ -4,10 +4,10 @@ const httpMsgs = require('../httpMsgs');
 exports.get = (req,res,myurl)=>{
     if(myurl.searchParams.get('date')){
         if(myurl.searchParams.get('div')){
-            attend.getByDiv(req,res,myurl.searchParams.get('date'));
+            attend.getByDiv(req,res,myurl.searchParams.get('date'),myurl.searchParams.get('div'));
         }
         else{
-            attend.get(req,res,myurl.searchParams.get('date'),myurl.searchParams.get('div'));
+            attend.get(req,res,myurl.searchParams.get('date'));
         }   
     }
     else{
