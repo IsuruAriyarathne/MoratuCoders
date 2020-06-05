@@ -1,0 +1,23 @@
+body{
+    background-color:#1F618D;;
+}
+
+.navbar-collapse{
+    font-size: 20px;
+}
+
+.navbar-brand{
+    font-size: 26px;
+}
+.dropdown-menu{
+    background-color: #343a40!important;
+}
+.dropdown-item{
+    color: white;
+    font-size: 20px;
+}
+#btn{
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+} 
