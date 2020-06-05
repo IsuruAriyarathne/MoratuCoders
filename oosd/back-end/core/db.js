@@ -1,8 +1,10 @@
 const mysql = require('mysql');
 const settings = require('../settings');
 
+var pool = mysql.createPool(settings.dbConfig);
+
 exports.excutesql = (sql, callback)=>{
-    var pool = mysql.createPool(settings.dbConfig);
+    
     pool.getConnection((err,conn)=>{
         if(err){
             callback(null,err);
